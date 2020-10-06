@@ -1,0 +1,61 @@
+// COLOUR PRIMARY
+
+$color-strong-cyan: hsl(171, 66%, 44%);
+$color-strong-cyan-dark: #1CA088;
+$color-light-blue: hsl(233, 100%, 69%);
+$color-light-blue-dark: #5763AE;
+
+// COLOUR NEUTRAL
+
+$color-grey-blue-light: hsl(201, 11%, 66%);
+$color-grey-blue-dark: hsl(210, 10%, 33%);
+$color-footer: #F7F8F8;
+
+$color-white: #fff;
+$color-black: #000;
+
+//----- BREAKPOINTS -----//
+
+$bp-largest: 75em;      // 1200px 
+$bp-large: 62.5em;      // 1000px 
+$bp-medium: 50em;       // 800px 
+$bp-small: 28.125em;    // 450px 
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  // 16px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 55%;
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 55%;
+    } 
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 400;
+    color: $color-grey-blue-light; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 111rem;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+

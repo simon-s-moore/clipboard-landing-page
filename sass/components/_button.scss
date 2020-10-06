@@ -1,0 +1,89 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        width: 100%;
+    } 
+}
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        width: 22.7rem;
+        height: 6rem;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        border-radius: 10rem;
+        position: relative;
+
+        font-size: 2rem;
+        font-family: inherit;
+        font-weight: 400;
+
+        border: none;
+        cursor: pointer;
+        outline: none;
+        
+        transition: all .2s;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        } 
+
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+
+    &:active {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    @media only screen and (hover: none) {
+        &:hover {
+            transform: translateY(0);
+            box-shadow: none;
+
+        }
+
+        &:active {
+            outline: none;
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    }
+
+    &-cyan {
+        background-color: $color-strong-cyan;
+        color: $color-white;
+        border-bottom: 3px solid $color-strong-cyan-dark;
+
+        margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: 2.5rem;
+        } 
+    }
+
+    &-blue {
+        background-color: $color-light-blue;
+        color: $color-white;
+        border-bottom: 3px solid $color-light-blue-dark;
+    }
+
+    &-animated {
+        animation: moveinbottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
